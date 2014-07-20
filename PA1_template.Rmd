@@ -117,7 +117,7 @@ library( reshape2 )
 intervalMeans <- melt(intervalMeans, id.var="time")
 g <- ggplot( intervalMeans, aes( time, value, col=variable ) )
 g <- g + geom_line() + facet_grid( variable ~ . )
-#g <- g + geom_line( aes( y=value, col="weekend" ) )
+g <- g + ylab( "Mean number of steps per time period")
 print( g )
 ```
 
